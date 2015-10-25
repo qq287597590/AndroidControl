@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:meizu="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/listview_loading_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/listview_loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+        <com.meizu.common.widget.LoadingView
+            android:id="@+id/loadingview"
+            style="@style/Widget.MeizuCommon.LoadingView.Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            meizu:mcLForeground="@color/loadingview_bgcolor" />
+        <TextView
+            style="@style/LoadingViewTextStyle.Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:text="@string/loading_view_text" />
+    </RelativeLayout>
+
+        <TextView
+            android:id="@+id/listview_empty_layout_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="@string/no_content_tip"
+            android:textColor="@color/black_50"
+            android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/listview_no_internet_layout_textview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="73dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:text="无网络链接，请检查网络设置"
+        />
+
+</LinearLayout>
